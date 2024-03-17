@@ -3,4 +3,6 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/1c8931cef21b478f8a74/maintainability)](https://codeclimate.com/github/Yonnico/frontend-project-44/maintainability)
 
-[![asciicast](https://asciinema.org/a/pnLxbPYIUHiwSEKBTL54rqnda.svg)](https://asciinema.org/a/pnLxbPYIUHiwSEKBTL54rqnda)  
+[![asciicast](https://asciinema.org/a/pnLxbPYIUHiwSEKBTL54rqnda.svg)](https://asciinema.org/a/pnLxbPYIUHiwSEKBTL54rqnda)
+
+[![asciicast](https://asciinema.org/a/2omiIkg00Yd3zOTAYl7BZ9daH.svg)](https://asciinema.org/a/2omiIkg00Yd3zOTAYl7BZ9daH)
