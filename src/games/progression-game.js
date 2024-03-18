@@ -2,25 +2,28 @@ import { getRandomNumber, start } from '../index.js';
 
 const condition = 'What number is missing in the progression?';
 
-const getProgression = (number, step, answerIndex) => {
-  const collection = [];
+const amountElements = 10;
+const safeIndex = 8;
 
-  collection.push(number);
+const getProgression = (number, step, answerIndex) => {
+  const progression = [];
+
+  progression.push(number);
 
   let hiddenElement = 0;
 
-  for (let i = 1; i <= 10; i += 1) {
-    collection.push(collection[i - 1] + step);
+  for (let i = 1; i <= amountElements; i += 1) {
+    progression.push(progression[i - 1] + step);
 
     if (i === answerIndex) {
-      hiddenElement = collection.pop();
-      collection.push('..');
-      collection.push(hiddenElement + step);
+      hiddenElement = progression.pop();
+      progression.push('..');
+      progression.push(hiddenElement + step);
       i += 1;
     }
   }
 
-  const question = collection.join(' ');
+  const question = progression.join(' ');
 
   return [question, hiddenElement];
 };
@@ -28,7 +31,7 @@ const getProgression = (number, step, answerIndex) => {
 const getQuestion = () => {
   const number = getRandomNumber();
   const step = getRandomNumber();
-  const answerIndex = getRandomNumber(8);
+  const answerIndex = getRandomNumber(safeIndex);
 
   const [question, rightAnswer] = getProgression(number, step, answerIndex);
 

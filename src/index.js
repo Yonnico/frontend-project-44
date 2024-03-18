@@ -1,5 +1,7 @@
 import { getName, getAnswer } from './cli.js';
 
+const amountIterations = 3;
+
 export const operators = ['+', '-', '*'];
 
 export const getRandomNumber = (num = 10) => Math.round(Math.random() * num) + 1;
@@ -42,7 +44,7 @@ export const start = (condition, getQuestion) => {
 
   let isVictory = true;
 
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < amountIterations; i += 1) {
     const gameData = getQuestion();
     const [question, rightAnswer] = gameData;
 
