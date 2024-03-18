@@ -2,7 +2,7 @@ import { getName, getAnswer } from './cli.js';
 
 export const operators = ['+', '-', '*'];
 
-export const getRandomNumber = () => Math.round(Math.random() * 100);
+export const getRandomNumber = (num = 10) => Math.round(Math.random() * num) + 1;
 
 export const getRandomOperator = () => operators[Math.floor(Math.random() * operators.length)];
 
