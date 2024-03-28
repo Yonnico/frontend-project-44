@@ -4,13 +4,6 @@ const amountIterations = 3;
 
 export const getRandomNumber = (num = 10) => Math.round(Math.random() * num);
 
-export const greeting = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name?');
-  console.log(`Hello, ${name}!`);
-  return name;
-};
-
 export const round = (question, rightAnswer) => {
   console.log(`Question: ${question}`);
 
@@ -34,7 +27,9 @@ export const finalMessage = (isVictory, name) => {
 };
 
 export const start = (condition, getQuestion) => {
-  const name = greeting();
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name?');
+  console.log(`Hello, ${name}!`);
 
   console.log(condition);
 
