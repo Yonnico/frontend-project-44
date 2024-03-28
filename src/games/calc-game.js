@@ -19,7 +19,7 @@ const getRightAnswer = (operator, num, num1) => {
 const getQuestion = () => {
   const number = getRandomNumber();
   const number1 = getRandomNumber();
-  const operator = operators[getRandomNumber(operators.length)];
+  const operator = operators[getRandomNumber(operators.length - 1)];
 
   const question = `${number} ${operator} ${number1}`;
   const rightAnswer = getRightAnswer(operator, number, number1);
