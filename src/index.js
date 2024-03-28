@@ -2,11 +2,7 @@ import readlineSync from 'readline-sync';
 
 const amountIterations = 3;
 
-export const operators = ['+', '-', '*'];
-
-export const getRandomNumber = (num = 10) => Math.round(Math.random() * num) + 1;
-
-export const getRandomOperator = () => operators[Math.floor(Math.random() * operators.length)];
+export const getRandomNumber = (num = 10) => Math.round(Math.random() * num);
 
 export const greeting = () => {
   console.log('Welcome to the Brain Games!');

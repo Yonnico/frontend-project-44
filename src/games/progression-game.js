@@ -29,9 +29,9 @@ const getProgression = (number, step, answerIndex) => {
 };
 
 const getQuestion = () => {
-  const number = getRandomNumber();
-  const step = getRandomNumber();
-  const answerIndex = getRandomNumber(safeIndex);
+  const number = getRandomNumber() + 1;
+  const step = getRandomNumber() + 1;
+  const answerIndex = getRandomNumber(safeIndex) + 1;
 
   const [question, rightAnswer] = getProgression(number, step, answerIndex);
 

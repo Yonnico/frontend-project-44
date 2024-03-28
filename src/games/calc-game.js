@@ -1,6 +1,7 @@
-import { getRandomNumber, getRandomOperator, start } from '../index.js';
+import { getRandomNumber, start } from '../index.js';
 
 const condition = 'What is the result of the expression?';
+const operators = ['+', '-', '*'];
 
 const getRightAnswer = (operator, num, num1) => {
   switch (operator) {
@@ -18,7 +19,7 @@ const getRightAnswer = (operator, num, num1) => {
 const getQuestion = () => {
   const number = getRandomNumber();
   const number1 = getRandomNumber();
-  const operator = getRandomOperator();
+  const operator = operators[getRandomNumber(operators.length)];
 
   const question = `${number} ${operator} ${number1}`;
   const rightAnswer = getRightAnswer(operator, number, number1);
