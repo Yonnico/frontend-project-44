@@ -1,4 +1,4 @@
-import { getName, getAnswer } from './cli.js';
+import readlineSync from 'readline-sync';
 
 const amountIterations = 3;
 
@@ -10,7 +10,7 @@ export const getRandomOperator = () => operators[Math.floor(Math.random() * oper
 
 export const greeting = () => {
   console.log('Welcome to the Brain Games!');
-  const name = getName();
+  const name = readlineSync.question('May I have your name?');
   console.log(`Hello, ${name}!`);
   return name;
 };
@@ -18,7 +18,7 @@ export const greeting = () => {
 export const round = (question, rightAnswer) => {
   console.log(`Question: ${question}`);
 
-  const answer = getAnswer();
+  const answer = readlineSync.question('Your answer: ');
 
   if (answer === String(rightAnswer)) {
     console.log('Correct!');
